@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Raleway:wght@200&display=swap');
+
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+:root{
+    --primary-color:  #6EDBD2;
+    --secondary-color: #B4E1DD;
+    --back-color: #1E525C;
+}
+
+.nav{
+    position: fixed;
+    width: 216vh;
+    box-shadow: 0 0 10px var(--secondary-color);
+    background-color: var(--primary-color);
+
+}
+
+.nav.active{
+    background-color: transparent;
+
+}
+
+.nav__list{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 2rem;
+
+}
+
+.nav__list h1{
+    margin-right: 970px;
+    font-size: 30px;
+    font-family: 'Inconsolata', monospace;
+}
+
+.nav__list h1 span{
+    font-weight: bolder;
+}
+
+.nav__listlogo{
+    list-style: none;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.nav__listlogo img{
+    width: 3rem;
+}
+
+.nav__listlogo img:hover, .nav__listlogo img:focus{
+    fill: var(--primary-color);
+
+} 
+
+.nav__listitem{
+    list-style: none;
+    font-weight: bold;
+    position: relative;
+    padding: 1.5rem 1rem;
+    cursor: pointer;
+}
+
+.nav__listitem:hover ul, .nav__listitem:focus ul{
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav__listitemdrop{
+    position: absolute;
+    top: 4rem;
+    left: -1rem;
+    box-shadow: 0 0 10px var(--primary-color);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    background-color: white;
+    transition: opacity 250ms ease-in-out;
+
+}
+
+.nav__listitemdrop a{
+    text-decoration: none;
+    color: black;
+    list-style: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 250ms ease-in-out;
+}
+
+.nav__listitemdrop li{
+    list-style: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 250ms ease-in-out;
+}
+
+.nav__listitemdrop li:hover, .nav__listitemdrop li:focus{
+    background-color: var(--secondary-color);
+}
+
+.nav__listitemdrop a:hover, .nav__listitemdrop a:focus{
+    background-color: var(--secondary-color);
+}

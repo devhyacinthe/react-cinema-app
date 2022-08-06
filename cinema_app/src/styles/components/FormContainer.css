@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Raleway:wght@200&display=swap');
+
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--back-color);
+}
+
+
+
+.form-component .form-container{
+    position: fixed;
+    text-align: center;
+    transform: translateY(95px);
+}
+
+
+
+.form-component  .form-container .btn-sort-container {
+    margin: 8px auto;
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.form-component  .form-container .btn-sort-container #goodToBad {
+    border-radius: 10px 0 0 10px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.form-component  .form-container .btn-sort-container #badToGood {
+    border-radius: 0 10px 10px 0;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.form-component  .form-container .btn-sort-container #goodToBad, .form-component  .btn-sort-container #badToGood{
+    background: var(--primary-color);
+      width: 300px;
+      transition: 0.3s;
+      position: relative;
+}
+
+.form-component  .form-container .btn-sort-container #goodToBad:hover, .form-component  .form-container .btn-sort-container #badToGood:hover{
+    background: var(--secondary-color)
+}
+
+.form-component  .form-container .btn-sort-container #goodToBad span{
+    transform: translateY(-50%) rotate(-90deg);
+    right: 18px;
+}
+
+.form-component  .form-container .btn-sort-container #badToGood span {
+    transform: translateY(-50%) rotate(90deg);
+    left: 16px;
+}
+
+
+.form-component  .form-container .btn-sort-container #goodToBad span, .form-component  .form-container .btn-sort-container #badToGood span {
+    position: absolute;
+    top: 50%;
+}
+
+.form-component .form-container .result {
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+}
+
+.form-component{
+ position: relative;
+ height: 1000px;
+ transform: translateY(200px);
+ z-index: -1;
+}

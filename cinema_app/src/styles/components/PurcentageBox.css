@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Raleway:wght@200&display=swap');
+
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.box{
+    transform: translate(700px, 300px);
+    height: 185px;
+    width: 185px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    border-radius: 100%;
+    box-shadow: 0 0 10px var(--secondary-color);
+}
+
+.box h2{
+    transform: translateX(75px);
+}
+
+
+svg circle{
+    fill: none;
+    stroke: var(--primary-color);
+    stroke-width: 10px;
+    transform: translate(1px, 1px);
+    stroke-linecap: round;
+    stroke-dasharray:  385;
+    stroke-dashoffset: 385;
+    animation: circle 5s forwards;
+}
+
+svg{
+    transform: translate(-25px, 5px);
+    width: 250px;
+}
+
+@keyframes circle {
+    to{
+        stroke-dashoffset: 65;
+    }
+}
+
+.main{
+    background-image: url('https://image.tmdb.org/t/p/original/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg');
+    background-repeat: none;
+    background-size: contain;
+    width: 100%;
+    height: 713px;
+}
